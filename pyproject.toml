@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tvlink"
+version = "1.0.0"
+description = "Control a TV over infrared with an Arduino and your laptop."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = ["pyserial>=3.5"]
+
+[project.scripts]
+tvlink = "tvlink.cli:main"
+
+[tool.setuptools]
+packages = ["tvlink"]
